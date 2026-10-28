@@ -21,9 +21,11 @@ On a high level, it consists of the following main screens:
 | *Visitor* | A person who visits the waiting room (for example a patient in a doctor's office). |
 | *Agent* | A person who processes visitors' requests at a *Service Point* (for example a doctor in a doctor's office working in a certain treatment room). |
 | *Service Point* | A service point uniquely identified by a *ServicePointID*. For example a treatment room in a doctor's office. |
-| *ServicePointID* | A unique identifier for a *Service Point*. |
+| *ServicePointID* | A unique technical identifier for a *Service Point*. Example: "TR3" |
+| *ServicePointName* | A human readable name of a *Service Point*. Example: "Treatment Room 3" |
 | *Waiting Room* | A Waiting Room. Has a name and a unique *WaitingRoomID*. |
-| *WaitingRoomID* | A unique identifier of a *Waiting Room*. |
+| *WaitingRoomID* | A unique technical identifier of a *Waiting Room*. Example: "WR1" |
+| *WaitingRoomName* | A human readable name of a *Waiting Room*. Example: "Waiting Room North" |
 
 
 ## Configuration
@@ -36,7 +38,7 @@ All configuration is held in a single configuration file on the server, in YAML 
 - `sound` (path or URL to the call-sound file; default applies to all rooms if not specified)
 - `timeFormat` (time format string for the footer; default `HH:mm` = 24-hour `hh:mm`)
 - `language` / locale (for localized UI strings; per Waiting Room)
-- `servicePoints`: list of `id` (*ServicePointID*) and `name` (display name)
+- `servicePoints`: list of `id` (*ServicePointID*) and `name` (*ServicePointName*)
 
 Global configuration:
 
